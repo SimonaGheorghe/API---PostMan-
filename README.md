@@ -117,6 +117,8 @@ JavaScript Tests: <br>
 # Execution report for the created API collection <br> 
 Below you can find the execution report that was generated through the Postman collection runner: <br> 
 <img width="659" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/0d69b0c2-b78e-4231-a6cb-4df137436471"> <br> 
+The collection was also run through newman directly from the terminal, and the results can be found below:<br> 
+<img width="486" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/96757fe6-cdfc-4b5f-a4bc-4cc9e262b871"> <br> 
 
 
 
