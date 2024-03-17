@@ -84,7 +84,7 @@ Below you can find a picture of the API request from Postman:<br>
 JavaScript Tests: <br> 
 <img width="629" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/a64d6275-1e83-4850-bae4-57fc2adc1be7"> <br> 
   
-<strong><li></strong> User not found</li></strong>
+<strong><li> User not found</li></strong>
 HTTP method for request: <strong> GET </strong>
 Request description: This request type indicates that the client is requesting data from the server. In this case, the client is attempting to retrieve user data for a user with ID 400 (which does not exist). <br> 
 Response status code: 404 Not Found <br> 
@@ -112,23 +112,40 @@ Response status code: 200 OK <br>
 Below you can find a picture of the API request from Postman:<br> 
 <img width="634" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/82cf675c-53fa-491b-9104-13b4c5acc9ab"> <br>
 JavaScript Tests: <br> 
-<img width="644" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/ace56172-d797-4dde-88de-2f7eebd1021a"> <br> 
+<img width="644" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/ace56172-d797-4dde-88de-2f7eebd1021a"> <br> </ol>
 
-# Execution report for the created API collection <br> 
+## Execution report for the created API collection <br> 
 Below you can find the execution report that was generated through the Postman collection runner: <br> 
 <img width="659" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/0d69b0c2-b78e-4231-a6cb-4df137436471"> <br> 
 The collection was also run through newman directly from the terminal, and the results can be found below:<br> 
-<img width="486" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/96757fe6-cdfc-4b5f-a4bc-4cc9e262b871"> <br> 
+<img width="486" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/96757fe6-cdfc-4b5f-a4bc-4cc9e262b871"> <br> </ul>
 
+## Defects found
+Title: Login successfully even if the password is not correct<br> 
 
+Precondition: The email and the password need to be correct in order to login and the status code to be 200 OK <br> 
 
+Reproduction Steps: <br> 
+<ul> <li>. Open Postman.</li>
+<li>.Ensure you are on the "Request" tab.</li>
+<li> In the URL bar, enter https://reqres.in/api/login.</li>
+<li> Select "POST" as the HTTP method from the dropdown menu next to the URL bar.</li>
+<li> Click on the "Body" tab below the URL bar. </li>
+<li> In the "Body" section, select the "raw" radio button.</li>
+<li>From the dropdown menu next to the "raw" radio button, select "JSON". </li>
+<li> In the text area below, enter the JSON object representing the login credentials.</li>
+<li> After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li>
+<br> 
+Expected Results: Postman will send the POST request to https://reqres.in/api/login with the provided login credentials in the request body.
+Once the server responds, the response will be displayed as 401 Unauthorized. <br>
 
+Actual Results: The response is 200 OK, even if the password is not correct. <br> 
 
+<img width="645" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/96722d47-b71b-4f9d-9fcf-314596b5371d">  <br> 
 
+## Conclusions
 
-
-
-
-
-  
-</ol>
+In conclusion, through a series of 25 tests encompassing 11 distinct requests, several key observations and conclusions have emerged:
+<li> Utilizing Postman to interact with the ReqRes API provides a streamlined approach for testing and validating API endpoints. Through Postman, developers can easily send various HTTP requests, such as GET, POST, PATCH, and more, to the ReqRes API endpoints and examine the responses. </li> 
+<li> The clarity and comprehensiveness of the ReqRes API documentation played a crucial role in facilitating the testing process. Clear documentation aided in understanding the API's capabilities, request formats, and expected responses, thereby enhancing usability and developer experience. </li>
+<li> A critical bug has been identified wherein unauthorized users can gain access to other accounts, even with incorrect passwords.</li>
