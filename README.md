@@ -133,13 +133,10 @@ Reproduction Steps: <br>
 <li>In the "Body" section, select the "raw" radio button.</li>
 <li>From the dropdown menu next to the "raw" radio button, select "JSON". </li>
 <li>In the text area below, enter the JSON object representing the login credentials.</li>
-<li>After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li> </ul>
-<br> 
+<li>After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li> </ul><br> 
 Expected Results: Postman will send the POST request to https://reqres.in/api/login with the provided login credentials in the request body.
 Once the server responds, the response will be displayed as 401 Unauthorized. <br>
-
 Actual Results: The response is 200 OK, even if the password is not correct. <br> 
-
 <img width="645" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/96722d47-b71b-4f9d-9fcf-314596b5371d">  <br> 
 
 ### Defect no. 2 <br> 
@@ -154,10 +151,9 @@ Reproduction Steps: <br>
 <li>In the "Body" section, select the "raw" radio button.</li>
 <li>From the dropdown menu next to the "raw" radio button, select "JSON". </li>
 <li>In the text area below, enter the JSON object representing the login credentials.</li>
-<li>After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li> </ul>
-<br> 
+<li>After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li> </ul><br> 
 Expected Results: Postman will send the POST request to https://reqres.in/api/register with the provided register credentials in the request body.
-Once the server responds, the response will be displayed as 400 Bad Request <br>
+Once the server responds, the response will be displayed as 400 Bad Request. <br>
 Actual Results: The response is 200 OK, even if the password is not correct. <br> 
 <img width="640" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/a8e6aede-4849-4baa-a442-6a2670e15603"> <br> 
 
@@ -169,8 +165,7 @@ Precondition: Request "Delete user" needs to be sent before sending the request 
 <li>In the URL bar, enter "https://reqres.in/api/users/6". </li>
 <li>Select "DELETE" as the HTTP method from the dropdown menu next to the URL bar.</li>
 <li>Send the request and the response status is 204 Not found (the user 6 has been deleted successfully). </li>
-<li>In the request named List Single user, in the URL bar, enter "https://reqres.in/api/users/6" and send it.</li></ul>
-<br> 
+<li>In the request named List Single user, in the URL bar, enter "https://reqres.in/api/users/6" and send it.</li></ul><br> 
 Expected Results: Postman will send the GET request to URL "https://reqres.in/api/users/6" and the status response is 404 Not Found. <br> 
 Actual Results: Even if the user was deleted by sending the request dedicated to delete the user number 6, after sending the request GET "https://reqres.in/api/users/6" - GET Single User, the status response is not 404 Not Found but 200 OK and in the body response are displayed the information for that user. <br> 
 <img width="652" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/f4292327-912a-493a-9738-24553a062db6"> <br> 
