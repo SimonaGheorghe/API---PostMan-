@@ -126,15 +126,15 @@ Title: Login successfully even if the password is not correct<br>
 Precondition: The email and the password need to be correct in order to login and the status code to be 200 OK <br> 
 
 Reproduction Steps: <br> 
-<ul> <li>. Open Postman.</li>
-<li>.Ensure you are on the "Request" tab.</li>
-<li> In the URL bar, enter https://reqres.in/api/login.</li>
-<li> Select "POST" as the HTTP method from the dropdown menu next to the URL bar.</li>
-<li> Click on the "Body" tab below the URL bar. </li>
-<li> In the "Body" section, select the "raw" radio button.</li>
+<ul><li> Open Postman.</li>
+<li>Ensure you are on the "Request" tab.</li>
+<li>In the URL bar, enter https://reqres.in/api/login.</li>
+<li>Select "POST" as the HTTP method from the dropdown menu next to the URL bar.</li>
+<li>Click on the "Body" tab below the URL bar. </li>
+<li>In the "Body" section, select the "raw" radio button.</li>
 <li>From the dropdown menu next to the "raw" radio button, select "JSON". </li>
-<li> In the text area below, enter the JSON object representing the login credentials.</li>
-<li> After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li>
+<li>In the text area below, enter the JSON object representing the login credentials.</li>
+<li>After entering the JSON object, click on the "Send" button located on the right side of the URL bar. </li>
 <br> 
 Expected Results: Postman will send the POST request to https://reqres.in/api/login with the provided login credentials in the request body.
 Once the server responds, the response will be displayed as 401 Unauthorized. <br>
