@@ -160,6 +160,7 @@ Actual Results: The response is 200 OK, even if the password is not correct. <br
 ### Defect no. 3 <br> 
 Title: Displayed deleted user after sending the deletion successfully for user 6 <br> 
 Precondition: Request "Delete user" needs to be sent before sending the request POST Single User.<br> 
+Reproduction Steps: <br>
 <ul><li> Open Postman.</li>
 <li>Ensure you are on the "Request" tab named Delete User.</li>
 <li>In the URL bar, enter "https://reqres.in/api/users/6". </li>
