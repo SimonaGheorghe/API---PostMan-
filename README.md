@@ -69,7 +69,7 @@ JavaScript Tests: <br>
   <strong><li> Register Unsuccessfully </li></strong>
 HTTP method for request: <strong> POST </strong>
 Request description: By sending this request in Postman and providing the necessary registration data in the request body, the client can initiate the registration process with the server. The response returned by the server will indicate the success or failure of the registration attempt, along with any additional information provided by the API.. <br> 
-Response status code: 404 Bad Request   <br> 
+Response status code: 400 Bad Request   <br> 
 Below you can find a picture of the API request from Postman:<br> 
 <img width="622" alt="image" src="https://github.com/SimonaGheorghe/API-Testing---PostMan/assets/163425980/0d6cb041-b0e4-45db-b7f4-048c5dff8dad"> <br> 
 JavaScript Tests: <br> 
